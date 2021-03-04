@@ -39,13 +39,13 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - run: yarn build
-      - run: yarn export
+#       - run: yarn export
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          publish_dir: ./build
 #   # This workflow contains a single job called "build"
 #   build:
 #     # The type of runner that the job will run on
